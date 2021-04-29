@@ -34,23 +34,23 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 ## Paso 2 - SQL Server
 * Realice la busqueda del tipo de recursos **SQL Servers** y seleccione esta opción
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-01.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-01.png)
 
 * Seleccione la crear un nuevo servidor (**+ New**)
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-02.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-02.png)
 
 * Seleccione el grupo de recursos creado anteriormente (**sqlcloud-rg**)
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-03.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-03.png)
 
 * Asigne el nombre del servidor y seleccion su región o localización
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-04.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-04.png)
 
 * Asigne el nombre del usuario administrador y su clave
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-05.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-05.png)
 
 	* **Server admin Login**	:	sqlclouduser
 	* **Password**				:	SQLCl0udUs3r
@@ -58,20 +58,20 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 
 * En la sección de Networking active la reglas de firewall
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-06.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-06.png)
 
 * En la sección de cnfiguración adicional deje los valores por defecto
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-07.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-07.png)
 
 * Asigne las etiquetas (TAGs) que quiera asignar al recurso
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-08.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-08.png)
 
 	* **Name**	:	Project 
 	* **Value**	:	SQLCloud
 
 * Seleccione la opción de crear y al final vaya al recurso creado
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Server-09.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-09.png)
 
