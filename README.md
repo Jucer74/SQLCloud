@@ -9,7 +9,6 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 
 ## Paso 1 - Grupo de recursos
 * Escoja la opción grupo de recursos (**Resource Group**)  y seleccione la opción de crear (**Create**)
-
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-Resource-01.png)
 
 
@@ -17,8 +16,8 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-Resource-02.png)
 
-	* **Resource group**	: 	sqlcloud-rg
-	* **Region**			:	(US) Central US
+	* **Resource group	:** 	sqlcloud-rg
+	* **Region			:**	(US) Central US
 
 
 * Asigne las etiquetas (TAGs) que quiera adicionar al recurso
