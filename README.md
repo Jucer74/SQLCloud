@@ -9,23 +9,22 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 
 ## Paso 1 - Grupo de recursos
 * Escoja la opción grupo de recursos (**Resource Group**)  y seleccione la opción de crear (**Create**)
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-Resource-01.png)
 
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-Resource-01.png)
 
 * Asigne el nombre y seleccione la region
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-Resource-02.png)
 
-	* **Resource group	:** 	sqlcloud-rg
-	* **Region			:**	(US) Central US
-
+- **Resource group**: sqlcloud-rg
+- **Region**:	(US) Central US
 
 * Asigne las etiquetas (TAGs) que quiera adicionar al recurso
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-Resource-03.png)
 
-	* **Name**	:	Project 
-	* **Value**	:	SQLCloud
+- **Name**	:	Project
+- **Value**	:	SQLCloud
 
 *  Seleccione la opción de crear (**Create**)
 
@@ -52,9 +51,9 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-05.png)
 
-	* **Server admin Login**	:	sqlclouduser
-	* **Password**				:	SQLCl0udUs3r
-	* **Confirm pasword**		:	SQLCl0udUs3r
+- **Server admin Login**	:	sqlclouduser
+- **Password**				:	SQLCl0udUs3r
+- **Confirm pasword**		:	SQLCl0udUs3r
 
 * En la sección de Networking active la reglas de firewall
 
@@ -68,8 +67,8 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-08.png)
 
-	* **Name**	:	Project 
-	* **Value**	:	SQLCloud
+- **Name**	:	Project 
+- **Value**	:	SQLCloud
 
 * Seleccione la opción de crear y al final vaya al recurso creado
 
