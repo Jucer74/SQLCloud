@@ -161,7 +161,7 @@ Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlcloud
 * Verifique que la conexión fue efectiva desplegando el contenido del servidor y de la base de datos
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-04-Connect-Database-07.png)
 
-## Paso 5 - Code First Project
+## Paso 5 - .Net Project
 En este punto vamos utilizar el projecto SQLCloud que es encuentra como version Inicial para realizar los pasos necesarios para incluir este llamado en el proyecto.
 
 ### Estructuras y Datos
@@ -207,3 +207,78 @@ public class Person
     public string PhoneNumber { get; set; }
 }
 ``` 
+
+### Procedamos
+
+#### Infrastructure
+* Adicione los siguientes paquetes referentes al uso de Entity Framework Core
+> * Microsoft.EntityFrameworkCore
+> * Microsoft.EntityFrameworkCore.SqlServer
+> * Microsoft.EntityFrameworkCore.Tools
+
+* En el proyecto de Infrastructure modifique la clase **ApplicationDbContext** para que incluya el uso del modelo establecido en el **Domain** asi:
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using People.Domain.Models;
+
+namespace People.Infrastructure
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public DbSet<Person> Employees { get; set; }
+    }
+}
+```
+#### Web Api
+* En el proyecto de **WebApi** adicione la cadena de conexión a la base de datos en el archivo de **AppSettins.json** asi:
+
+```json
+"ConnectionStrings": {
+    "CnnStr": "Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlclouddatabase;Persist Security Info=False;User ID=sqlclouduser;Password=SQLCl0udUs3r;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+},
+
+```
+Recuerde utilizar la cadena de conexión con el password actualizado
+
+* Adicone los paquetes referentes al manejo del entity framework:
+> * Microsoft.EntityFrameworkCore.Design 
+
+* Modifique la clase **StartUp** en el metodo de **ConfigureServices** para adicionar el uso de la cadena de conexión a la base de datos de tipo SQL Server asi:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers();
+
+    // Add the Database Context
+    services.AddDbContext<ApplicationDbContext>(options =>
+    {
+        options.UseSqlServer(Configuration.GetConnectionString("CnnStr"));
+    });
+
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "SQLCloud.WebApi", Version = "v1" });
+    });
+}
+```
+
+#### Adicionar la Migracion
+* Usando la consola del administrador de paquetes (Package Manager Console) de visual studio, ejecute el siguiente comando teniendo como destino el proyecto de Infrastructure asi:
+
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-05-Net-Project-01.png)
+
+```
+Add-Migration Initial
+```
+
+Este proceso adicionara un directorio llamado **Migrations** al proyecto de **Infrastructure** asi como las clases necesarias para configurar y crear la base de datos y ls tablas asociadas.
+
+* Ejecute el proyecto de WebApi para que se apliquen los cambios.
+
+ 
