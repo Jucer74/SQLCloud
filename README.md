@@ -279,6 +279,25 @@ Add-Migration Initial
 
 Este proceso adicionara un directorio llamado **Migrations** al proyecto de **Infrastructure** asi como las clases necesarias para configurar y crear la base de datos y ls tablas asociadas.
 
-* Ejecute el proyecto de WebApi para que se apliquen los cambios.
+* Ejecute la actualizacion de la base de datos ejecutando el siguiente comando en la consola:
 
- 
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-05-Net-Project-02.png)
+
+```
+Update-Database
+```
+
+* Confirme los cambios en SQL Server Management Studio.
+
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-05-Net-Project-03.png)
+
+
+## Paso 6 - Controller
+* Adicione el Controlador
+
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-06-Controller-01.png)
+
+
+
+
+

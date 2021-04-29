@@ -10,7 +10,7 @@ using SQLCloud.Infrastructure;
 namespace SQLCloud.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210429174638_Initial")]
+    [Migration("20210429175634_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
