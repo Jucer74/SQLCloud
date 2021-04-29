@@ -160,3 +160,14 @@ Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlcloud
 
 * Verifique que la conexión fue efectiva desplegando el contenido del servidor y de la base de datos
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-04-Connect-Database-07.png)
+
+## Paso 5 - Code First Project
+En este punto vamos utilizar el projecto SQLCloud que es encuentra como version Inicial para realizar los pasos necesarios para incluir este llamado en el proyecto.
+
+### Contexto
+La solución tiene tres (3) pojectos:
+
+1. **WebAPI**: Web Api y projecto principal de la solucion
+2. **Domain**: Dominio de la solucion y donde se encuantran los Modelos
+3. **Infrastructure**: Proyecto que define el Contexto de base de atos y donde se configura el uso del EF (Entity Framework) para consumir los datos de la base de datos.
+4. 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SQLCloud.Domain
+namespace SQLCloud.Domain.Models
 {
     public class Person
     {
