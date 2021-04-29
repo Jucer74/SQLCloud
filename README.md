@@ -77,51 +77,51 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 ## Paso 3 - SQL Database
 * Realice la busqueda del tipo de recursos **SQL Servers** y seleccione esta opción
 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-01.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-01.png)
 
 * Seleccione crear una nueva SQL database (**+ New**) 
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-02.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-02.png)
 
 * Confirme el resource group (**sqlcloud-rg**)
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-03.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-03.png)
 
 * Asigne el nombre y seleccione el servidor de SQL creado anteriormente
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-04.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-04.png)
 
 > - **Database name** :	sqlclouddatabase
 > - **Server** 		:	sqlcloud-sqlserver
 
 * Seleccione la opción para configurar la base de datos
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-05.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-05.png)
 
 * Cambie el Tipo a la opcion **Basic** con la configuración por defecto y aplique los cambios
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-06.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-06.png)
 
 * Verifique que la configuración fue efectiva
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-07.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-07.png)
 
 * En la sección de networking deje los valores por defecto
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-08.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-08.png)
 
 * Para la sección de security deje los valores por defecto
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-09.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-09.png)
 
 * Para la sección de configuración adicional deje los valores por defecto
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-10.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-10.png)
 
 * Adicione las etiquetas que quiera al recurso
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-11.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-11.png)
 
 * En la Opción final verifique la configuración y cree el recurso
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-12.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-12.png)
 
 * En la configuración de la base de datos copie el nombre de la base de datos y luego Seleccione la opción de ver la cadena de conexión
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-13.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-13.png)
 
 > - **Server name**: sqlcloud-sqlserver.database.windows.net
 
 * Copie el contenido de la cadena de conexión para poder adicionar la clave del usuario administrador
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-14.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-14.png)
 
 > - Connection String:
 
@@ -129,7 +129,7 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlclouddatabase;Persist Security Info=False;User ID=sqlclouduser;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 ```
 * Modifique la cadena de conexión y reemplace el password por el asignado al usuario administrador.
-![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-01-Create-SQL-Database-15.png)
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-03-Create-SQL-Database-15.png)
 
 ```
 Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlclouddatabase;Persist Security Info=False;User ID=sqlclouduser;Password=SQLCl0udUs3r;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
