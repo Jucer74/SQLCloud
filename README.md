@@ -164,10 +164,46 @@ Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlcloud
 ## Paso 5 - Code First Project
 En este punto vamos utilizar el projecto SQLCloud que es encuentra como version Inicial para realizar los pasos necesarios para incluir este llamado en el proyecto.
 
-### Contexto
+### Estructuras y Datos
 La solución tiene tres (3) pojectos:
 
 1. **WebAPI**: Web Api y projecto principal de la solucion
 2. **Domain**: Dominio de la solucion y donde se encuantran los Modelos
 3. **Infrastructure**: Proyecto que define el Contexto de base de atos y donde se configura el uso del EF (Entity Framework) para consumir los datos de la base de datos.
-4. 
+
+### Datos
+Para trabajar este ejemplo utilizaremos la definicion de la clase **Person** de la siguiente forma:
+
+```csharp
+public class Person
+{
+    [Key]
+    public int Id { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string FirstName { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string LastName { get; set; }
+
+    [Required]
+    [MaxLength(1)]
+    public string Gender { get; set; }
+
+    [Required]
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+    public DateTime DateOfBirth { get; set; }
+
+    [Required]
+    [MaxLength(320)]
+    [EmailAddress]
+    public string Email { get; set; }
+
+    [MaxLength(20)]
+    [Phone]
+    public string PhoneNumber { get; set; }
+}
+``` 
