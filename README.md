@@ -46,6 +46,8 @@ Inicialmente vamos a crear  configurar la base de datos en el portal de Azure
 * Asigne el nombre del servidor y seleccion su región o localización
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-02-Create-SQL-Server-04.png)
+> - **Server Name:** sqlcloud-sqlserver
+> - **Location:** (US) Central US
 
 * Asigne el nombre del usuario administrador y su clave
 
@@ -245,8 +247,12 @@ namespace People.Infrastructure
 ```
 Recuerde utilizar la cadena de conexión con el password actualizado
 
-* Adicone los paquetes referentes al manejo del entity framework:
-> * Microsoft.EntityFrameworkCore.Design 
+* Adicone los paquetes referentes al manejo del entity framework y la generacion de los controladores de forma automática:
+
+> - Microsoft.EntityFrameworkCore.Design
+> - Microsoft.EntityFrameworkCore.SqlServer
+> - Microsoft.VisualStudio.Web.CodeGeneration.Core
+> - Microsoft.VisualStudio.Web.CodeGeneration.Design
 
 * Modifique la clase **StartUp** en el metodo de **ConfigureServices** para adicionar el uso de la cadena de conexión a la base de datos de tipo SQL Server asi:
 
@@ -293,9 +299,23 @@ Update-Database
 
 
 ## Paso 6 - Controller
-* Adicione el Controlador
+Algunas veces el proceso de Scalfolding presenta errores de generacion automatica. por este motivo generaremos de manera semi-automatica el controlador. Para ello instalaremos la herramiena de **aspnet-codegenerator** y ejecutaremos los comando en consola para generar el controlador
+ 
+* Instalar la herramienta de **aspnet-codegenerator** usando el siguiente comando:
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-06-Controller-01.png)
+
+```
+dotnet tool install --global dotnet-aspnet-codegenerator
+```
+
+* Adicione el Controlador por consola usando el siguiente comando:
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-06-Controller-02.png)
+
+```
+dotnet aspnet-codegenerator controller -name PeopleController -api -async -m Person -dc ApplicationDbContext -namespace SQLCloud.WebApi.Controllers -outDir Controllers
+```
+
 
 
 
