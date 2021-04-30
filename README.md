@@ -163,6 +163,8 @@ Server=tcp:sqlcloud-sqlserver.database.windows.net,1433;Initial Catalog=sqlcloud
 * Verifique que la conexión fue efectiva desplegando el contenido del servidor y de la base de datos
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-04-Connect-Database-07.png)
 
+
+
 ## Paso 5 - .Net Project
 En este punto vamos utilizar el projecto SQLCloud que es encuentra como version Inicial para realizar los pasos necesarios para incluir este llamado en el proyecto.
 
@@ -297,6 +299,10 @@ Update-Database
 
 ![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-05-Net-Project-03.png)
 
+* En la sesión de SQL abra el archivo **Insert_People.sql** que se encuentra en el directorio de Data y ejecutelo para insertar datos en la tabla **People**.
+
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-05-Net-Project-04.png)
+
 
 ## Paso 6 - Controller
 Algunas veces el proceso de Scalfolding presenta errores de generacion automatica. por este motivo generaremos de manera semi-automatica el controlador. Para ello instalaremos la herramiena de **aspnet-codegenerator** y ejecutaremos los comando en consola para generar el controlador
@@ -316,7 +322,10 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 dotnet aspnet-codegenerator controller -name PeopleController -api -async -m Person -dc ApplicationDbContext -namespace SQLCloud.WebApi.Controllers -outDir Controllers
 ```
 
+## Paso 7 - Test
+* Ejecute la apliación presionando **F5** y ejecute la consulta mediante la opcion **GET**
 
+![](https://github.com/Jucer74/SQLCloud/blob/main/Images/Step-07-Test-01.png)
 
 
 
