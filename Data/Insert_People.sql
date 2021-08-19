@@ -2,6 +2,9 @@ USE [sqlclouddatabase]
 GO
 
 INSERT INTO [dbo].[People]([FirstName], [LastName], [Gender], [DateOfBirth], [Email], [PhoneNumber])
+VALUES(N'Julio'		,N'Robles'		,N'M'	,N'1974/10/08'		,'Julio.RoblesU@Perficient.com'	,'+57 (318) 552-6543')
+GO
+INSERT INTO [dbo].[People]([FirstName], [LastName], [Gender], [DateOfBirth], [Email], [PhoneNumber])
 VALUES('Nealson'	,'Heims'		,'M'	,'1975/01/29'		,'nheims0@ucoz.com'				,'+235 (199) 101-9798')
 GO
 INSERT INTO [dbo].[People]([FirstName], [LastName], [Gender], [DateOfBirth], [Email], [PhoneNumber])
